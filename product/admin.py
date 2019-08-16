@@ -24,6 +24,7 @@ class ProductAdmin(admin.ModelAdmin):
     list_display = (
         'pk',
         'title',
+        'content',
         'price',
         'stock',
         'slug',
@@ -33,6 +34,7 @@ class ProductAdmin(admin.ModelAdmin):
     list_filter = ('status', )
     list_editable = (
         'title',
+        'content',
         'status', 
     )
 

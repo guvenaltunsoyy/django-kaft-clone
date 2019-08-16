@@ -14,6 +14,9 @@ def index(request):
     context = dict()
     context['images'] = Carousel.objects.filter(
         status=STATUS).exclude(cover_image='')
+    context['products'] = Product.objects.filter(
+        status=STATUS
+    )[:9]
     # context['images'] = images
     # context['categories'] = Category.objects.filter(
     #     status=STATUS
